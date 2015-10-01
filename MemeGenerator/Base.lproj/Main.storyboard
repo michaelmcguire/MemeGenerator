@@ -20,11 +20,14 @@
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-d4-ZEY" userLabel="generateButton">
                                 <rect key="frame" x="268" y="104" width="64" height="30"/>
                                 <state key="normal" title="Generate"/>
+                                <connections>
+                                    <action selector="generateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="Syw-ZU-6aV"/>
+                                </connections>
                             </button>
                             <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-JV-uXM" userLabel="memeImageView">
                                 <rect key="frame" x="20" y="142" width="560" height="458"/>
                             </imageView>
-                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="88A-Z5-1NU">
+                            <activityIndicatorView hidden="YES" opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="88A-Z5-1NU">
                                 <rect key="frame" x="282" y="352" width="37" height="37"/>
                                 <color key="color" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
                             </activityIndicatorView>
