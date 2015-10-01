@@ -65,8 +65,8 @@
 				BF6047791BBDAA34008C8E9C /* AppDelegate.swift */,
 				BF60477B1BBDAA34008C8E9C /* ViewController.swift */,
 				BF60477D1BBDAA34008C8E9C /* Main.storyboard */,
-				BF6047801BBDAA34008C8E9C /* Assets.xcassets */,
 				BF6047821BBDAA34008C8E9C /* LaunchScreen.storyboard */,
+				BF6047801BBDAA34008C8E9C /* Assets.xcassets */,
 				BF6047851BBDAA34008C8E9C /* Info.plist */,
 			);
 			path = MemeGenerator;

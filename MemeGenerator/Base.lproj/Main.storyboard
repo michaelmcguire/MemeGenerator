@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="8191" systemVersion="14F27" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" initialViewController="BYZ-38-t0r">
     <dependencies>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="8154"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
     <scenes>
         <!--View Controller-->
@@ -15,11 +16,73 @@
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-d4-ZEY" userLabel="generateButton">
+                                <rect key="frame" x="268" y="104" width="64" height="30"/>
+                                <state key="normal" title="Generate"/>
+                            </button>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="THJ-JV-uXM" userLabel="memeImageView">
+                                <rect key="frame" x="20" y="142" width="560" height="458"/>
+                            </imageView>
+                            <activityIndicatorView opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" animating="YES" style="whiteLarge" translatesAutoresizingMaskIntoConstraints="NO" id="88A-Z5-1NU">
+                                <rect key="frame" x="282" y="352" width="37" height="37"/>
+                                <color key="color" red="0.098039217293262482" green="0.098039217293262482" blue="0.098039217293262482" alpha="1" colorSpace="calibratedRGB"/>
+                            </activityIndicatorView>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="3Ey-HG-ak6" userLabel="topTextField">
+                                <rect key="frame" x="200" y="28" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="WEo-4M-PcZ"/>
+                                    <constraint firstAttribute="width" constant="200" id="ff1-yZ-ykJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="GBC-IZ-Ejn" userLabel="bottomTextField">
+                                <rect key="frame" x="200" y="66" width="200" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" relation="greaterThanOrEqual" constant="200" id="dsm-g0-Fv6"/>
+                                    <constraint firstAttribute="width" constant="200" id="fzK-24-ddJ"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                        </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstAttribute="trailingMargin" secondItem="THJ-JV-uXM" secondAttribute="trailing" id="03e-zv-24e"/>
+                            <constraint firstItem="3Ey-HG-ak6" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" constant="8" id="7lr-8A-tLE"/>
+                            <constraint firstItem="88A-Z5-1NU" firstAttribute="centerX" secondItem="THJ-JV-uXM" secondAttribute="centerX" id="8vl-Zr-G01"/>
+                            <constraint firstItem="wfy-db-euE" firstAttribute="top" secondItem="THJ-JV-uXM" secondAttribute="bottom" id="Bj6-pF-sXd"/>
+                            <constraint firstItem="THJ-JV-uXM" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leadingMargin" id="FOp-T5-XRa"/>
+                            <constraint firstItem="Kel-d4-ZEY" firstAttribute="centerX" secondItem="THJ-JV-uXM" secondAttribute="centerX" id="LIl-Uy-c13"/>
+                            <constraint firstItem="GBC-IZ-Ejn" firstAttribute="centerX" secondItem="THJ-JV-uXM" secondAttribute="centerX" id="QtJ-5c-flI"/>
+                            <constraint firstItem="GBC-IZ-Ejn" firstAttribute="centerX" secondItem="Kel-d4-ZEY" secondAttribute="centerX" id="S8q-NB-Jnp"/>
+                            <constraint firstItem="Kel-d4-ZEY" firstAttribute="top" secondItem="GBC-IZ-Ejn" secondAttribute="bottom" constant="8" id="Sc7-JQ-xbD"/>
+                            <constraint firstItem="3Ey-HG-ak6" firstAttribute="centerX" secondItem="THJ-JV-uXM" secondAttribute="centerX" id="Vnn-Jn-g46"/>
+                            <constraint firstItem="3Ey-HG-ak6" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="eHR-7Q-3T9"/>
+                            <constraint firstItem="88A-Z5-1NU" firstAttribute="centerY" secondItem="THJ-JV-uXM" secondAttribute="centerY" id="jid-S9-VN7"/>
+                            <constraint firstItem="GBC-IZ-Ejn" firstAttribute="top" secondItem="3Ey-HG-ak6" secondAttribute="bottom" constant="8" id="khI-GT-8EL"/>
+                            <constraint firstItem="THJ-JV-uXM" firstAttribute="top" secondItem="Kel-d4-ZEY" secondAttribute="bottom" constant="8" id="ozQ-jT-Z08"/>
+                            <constraint firstItem="3Ey-HG-ak6" firstAttribute="centerX" secondItem="GBC-IZ-Ejn" secondAttribute="centerX" id="ybU-6M-dOg"/>
+                        </constraints>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="Vnn-Jn-g46"/>
+                                <exclude reference="QtJ-5c-flI"/>
+                            </mask>
+                        </variation>
                     </view>
+                    <connections>
+                        <outlet property="bottomTextField" destination="GBC-IZ-Ejn" id="cvb-qe-rI8"/>
+                        <outlet property="generateButton" destination="Kel-d4-ZEY" id="LzP-2b-iiE"/>
+                        <outlet property="memeImageView" destination="THJ-JV-uXM" id="taU-wH-r6T"/>
+                        <outlet property="networkActivityIndicatorView" destination="88A-Z5-1NU" id="lF1-0Q-jXk"/>
+                        <outlet property="topTextField" destination="3Ey-HG-ak6" id="WAs-af-G9n"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="553" y="500"/>
         </scene>
     </scenes>
 </document>
