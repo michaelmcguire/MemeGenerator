@@ -28,10 +28,14 @@ class ViewController: UIViewController {
       let bottom = bottomTextField.text {
         
         server.generateMeme(top, bottom: bottom) { (image, error) -> Void in
+          self.enableOrDisableGenerateButton()
+          
+          self.generateButton.enabled = true
           if let image = image {
             self.memeImageView.image = image
           }
         }
+        self.enableOrDisableGenerateButton()
     }
   }
   
@@ -40,7 +44,9 @@ class ViewController: UIViewController {
   }
   
   func enableOrDisableGenerateButton() {
-    if self.topTextField.text?.characters.count >= 3 && self.bottomTextField.text?.characters.count >= 4 {
+    if topTextField.text?.characters.count >= 3
+      && bottomTextField.text?.characters.count >= 4
+      && server.isGenerating == false {
       generateButton.enabled = true
     } else {
       generateButton.enabled = false
