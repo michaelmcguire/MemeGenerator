@@ -31,7 +31,6 @@ class ViewController: UIViewController {
         server.generateMeme(top, bottom: bottom) { (image, error) -> Void in
           self.enableOrDisableGenerateButton()
           
-          self.generateButton.enabled = true
           if let image = image {
             self.memeImageView.image = image
           }
