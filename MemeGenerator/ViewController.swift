@@ -14,7 +14,7 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
     
-    enableOrDisableGenerateButton()
+    updateUI()
     
     self.topTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
     self.bottomTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
@@ -29,21 +29,30 @@ class ViewController: UIViewController {
       let bottom = bottomTextField.text {
         
         server.generateMeme(top, bottom: bottom) { (image, error) -> Void in
-          self.enableOrDisableGenerateButton()
+          self.updateUI()
           
           if let image = image {
             self.memeImageView.image = image
           }
         }
-        self.enableOrDisableGenerateButton()
+        self.updateUI()
     }
   }
   
-  func textFieldDidChange(textField: UITextField) {
-    enableOrDisableGenerateButton()
+  @IBAction func cancelTapped(sender: UIButton) {
+    
+    topTextField.resignFirstResponder()
+    bottomTextField.resignFirstResponder()
+    
+    
+    
   }
   
-  func enableOrDisableGenerateButton() {
+  func textFieldDidChange(textField: UITextField) {
+    updateUI()
+  }
+  
+  func updateUI() {
     if topTextField.text?.characters.count >= 3
       && bottomTextField.text?.characters.count >= 4
       && server.isGenerating == false {
@@ -51,6 +60,9 @@ class ViewController: UIViewController {
     } else {
       generateButton.enabled = false
     }
+    
+    networkActivityIndicatorView.hidden = !server.isGenerating
+    memeImageView.hidden = server.isGenerating
   }
 }
 
