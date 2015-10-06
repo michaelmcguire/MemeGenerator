@@ -1,12 +1,14 @@
 import Foundation
 import UIKit
 
+typealias RequestCallback = (UIImage?, NSError?) -> Void
+typealias CancelationToken = () -> Void
+
 class Server {
-  typealias RequestCallback = (UIImage?, NSError?) -> Void
-  
+
   var isGenerating = false
   
-  func generateMeme(top: String, bottom: String, completion:RequestCallback) -> Void {
+  func generateMeme(top: String, bottom: String, completion:RequestCallback) -> CancelationToken {
     
     isGenerating = true
     
@@ -31,5 +33,9 @@ class Server {
     }
     
     task.resume()
+    
+    return {
+      task.cancel()
+    }
   }
 }

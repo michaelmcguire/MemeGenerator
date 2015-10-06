@@ -10,6 +10,7 @@ class ViewController: UIViewController {
   @IBOutlet weak var networkActivityIndicatorView: UIActivityIndicatorView!
 
   let server = Server()
+  var cancelToken: CancelationToken?
   
   override func viewDidLoad() {
     super.viewDidLoad()
@@ -28,7 +29,8 @@ class ViewController: UIViewController {
     if let top = topTextField.text,
       let bottom = bottomTextField.text {
         
-        server.generateMeme(top, bottom: bottom) { (image, error) -> Void in
+        cancelToken = server.generateMeme(top, bottom: bottom) { (image, error) -> Void in
+          self.cancelToken = nil
           self.updateUI()
           
           if let image = image {
@@ -44,8 +46,9 @@ class ViewController: UIViewController {
     topTextField.resignFirstResponder()
     bottomTextField.resignFirstResponder()
     
-    
-    
+    self.cancelToken?()
+    self.cancelToken = nil
+    self.updateUI()
   }
   
   func textFieldDidChange(textField: UITextField) {
@@ -63,6 +66,7 @@ class ViewController: UIViewController {
     
     networkActivityIndicatorView.hidden = !server.isGenerating
     memeImageView.hidden = server.isGenerating
+    cancelButton.enabled = self.cancelToken != nil
   }
 }
 
