@@ -48,6 +48,9 @@
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Kel-d4-ZEY" userLabel="generateButton">
                                         <rect key="frame" x="0.0" y="0.0" width="64" height="30"/>
                                         <state key="normal" title="Generate"/>
+                                        <connections>
+                                            <action selector="generateTapped:" destination="BYZ-38-t0r" eventType="touchUpInside" id="e11-Re-5Sh"/>
+                                        </connections>
                                     </button>
                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="XMN-Qz-7wX" userLabel="cancelButton">
                                         <rect key="frame" x="72" y="0.0" width="48" height="30"/>
