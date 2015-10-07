@@ -24,10 +24,16 @@ class ViewController: UIViewController {
     let executing = request.executing.producer
     let notExecuting = request.executing.producer.map { !$0 }
     
-    generateButton.rex_enabled <~ notExecuting
+    generateButton.rex_enabled <~
+      combineLatest(notExecuting, self.topTextField.rac_textSignalProducer(), self.bottomTextField.rac_textSignalProducer())
+      .map {(notExecuting, topText, bottomText) in
+        return (notExecuting
+          && (topText.characters.count >= 3)
+          && (bottomText.characters.count >= 4))
+      }
     cancelButton.rex_enabled <~ executing
-    networkActivityIndicatorView.meme_hidden <~ notExecuting
-    memeImageView.meme_hidden <~ executing
+    networkActivityIndicatorView.rac_hidden <~ notExecuting
+    memeImageView.rac_hidden <~ executing
   }
   
   @IBAction func generateTapped(sender: UIButton) {
