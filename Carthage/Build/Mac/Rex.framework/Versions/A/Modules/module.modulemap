@@ -1,0 +1,10 @@
+framework module Rex {
+  umbrella header "Rex.h"
+
+  export *
+  module * { export * }
+}
+
+module Rex.Swift {
+    header "Rex-Swift.h"
+}

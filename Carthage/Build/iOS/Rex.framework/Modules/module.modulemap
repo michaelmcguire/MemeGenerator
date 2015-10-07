@@ -1,0 +1,3 @@
+framework module Rex {
+    header "Rex-Swift.h"
+}

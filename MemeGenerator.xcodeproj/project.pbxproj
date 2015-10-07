@@ -15,6 +15,7 @@
 		BF6047841BBDAA34008C8E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6047821BBDAA34008C8E9C /* LaunchScreen.storyboard */; };
 		BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */; };
 		BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478C1BBDB4D9008C8E9C /* Result.framework */; };
+		BF6C4EAD1BC5C01300A33FB0 /* Rex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		BF6047851BBDAA34008C8E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		BF60478C1BBDB4D9008C8E9C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
+		BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rex.framework; path = Carthage/Build/iOS/Rex.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,6 +37,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				BF6C4EAD1BC5C01300A33FB0 /* Rex.framework in Frameworks */,
 				BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */,
 				BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */,
 			);
@@ -46,6 +49,7 @@
 		BF60476D1BBDAA34008C8E9C = {
 			isa = PBXGroup;
 			children = (
+				BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */,
 				BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */,
 				BF60478C1BBDB4D9008C8E9C /* Result.framework */,
 				BF6047781BBDAA34008C8E9C /* MemeGenerator */,
@@ -149,6 +153,7 @@
 			inputPaths = (
 				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
 				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
+				"$(SRCROOT)/Carthage/Build/iOS/Rex.framework",
 			);
 			outputPaths = (
 			);
