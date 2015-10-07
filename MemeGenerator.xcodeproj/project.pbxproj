@@ -16,6 +16,7 @@
 		BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */; };
 		BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478C1BBDB4D9008C8E9C /* Result.framework */; };
 		BF6C4EAD1BC5C01300A33FB0 /* Rex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */; };
+		BF6CAFDA1BC5D4F70079F7FA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,6 +31,7 @@
 		BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
 		BF60478C1BBDB4D9008C8E9C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 		BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rex.framework; path = Carthage/Build/iOS/Rex.framework; sourceTree = "<group>"; };
+		BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -70,6 +72,7 @@
 			children = (
 				BF6047791BBDAA34008C8E9C /* AppDelegate.swift */,
 				BF562E461BC4CB9A004236F9 /* Server.swift */,
+				BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */,
 				BF60477B1BBDAA34008C8E9C /* ViewController.swift */,
 				BF60477D1BBDAA34008C8E9C /* Main.storyboard */,
 				BF6047821BBDAA34008C8E9C /* LaunchScreen.storyboard */,
@@ -170,6 +173,7 @@
 			files = (
 				BF60477C1BBDAA34008C8E9C /* ViewController.swift in Sources */,
 				BF562E471BC4CB9A004236F9 /* Server.swift in Sources */,
+				BF6CAFDA1BC5D4F70079F7FA /* UIViewExtensions.swift in Sources */,
 				BF60477A1BBDAA34008C8E9C /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

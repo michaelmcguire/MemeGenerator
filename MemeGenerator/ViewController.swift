@@ -21,8 +21,13 @@ class ViewController: UIViewController {
   override func viewDidLoad() {
     super.viewDidLoad()
   
-    generateButton.rex_enabled <~ request.executing.producer.map { !$0 }
-    cancelButton.rex_enabled <~ request.executing
+    let executing = request.executing.producer
+    let notExecuting = request.executing.producer.map { !$0 }
+    
+    generateButton.rex_enabled <~ notExecuting
+    cancelButton.rex_enabled <~ executing
+    networkActivityIndicatorView.meme_hidden <~ notExecuting
+    memeImageView.meme_hidden <~ executing
   }
   
   @IBAction func generateTapped(sender: UIButton) {
