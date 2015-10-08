@@ -13,8 +13,6 @@
 		BF60477F1BBDAA34008C8E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF60477D1BBDAA34008C8E9C /* Main.storyboard */; };
 		BF6047811BBDAA34008C8E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6047801BBDAA34008C8E9C /* Assets.xcassets */; };
 		BF6047841BBDAA34008C8E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6047821BBDAA34008C8E9C /* LaunchScreen.storyboard */; };
-		BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */; };
-		BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478C1BBDB4D9008C8E9C /* Result.framework */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,8 +24,6 @@
 		BF6047801BBDAA34008C8E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6047831BBDAA34008C8E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6047851BBDAA34008C8E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		BF60478C1BBDB4D9008C8E9C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -35,8 +31,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */,
-				BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -46,8 +40,6 @@
 		BF60476D1BBDAA34008C8E9C = {
 			isa = PBXGroup;
 			children = (
-				BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */,
-				BF60478C1BBDB4D9008C8E9C /* Result.framework */,
 				BF6047781BBDAA34008C8E9C /* MemeGenerator */,
 				BF6047771BBDAA34008C8E9C /* Products */,
 			);
@@ -85,7 +77,6 @@
 				BF6047721BBDAA34008C8E9C /* Sources */,
 				BF6047731BBDAA34008C8E9C /* Frameworks */,
 				BF6047741BBDAA34008C8E9C /* Resources */,
-				BF52CBE91BBDB85900A3F59B /* ShellScript */,
 			);
 			buildRules = (
 			);
@@ -139,24 +130,6 @@
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXResourcesBuildPhase section */
-
-/* Begin PBXShellScriptBuildPhase section */
-		BF52CBE91BBDB85900A3F59B /* ShellScript */ = {
-			isa = PBXShellScriptBuildPhase;
-			buildActionMask = 2147483647;
-			files = (
-			);
-			inputPaths = (
-				"$(SRCROOT)/Carthage/Build/iOS/Result.framework",
-				"$(SRCROOT)/Carthage/Build/iOS/ReactiveCocoa.framework",
-			);
-			outputPaths = (
-			);
-			runOnlyForDeploymentPostprocessing = 0;
-			shellPath = /bin/sh;
-			shellScript = "/usr/local/bin/carthage copy-frameworks";
-		};
-/* End PBXShellScriptBuildPhase section */
 
 /* Begin PBXSourcesBuildPhase section */
 		BF6047721BBDAA34008C8E9C /* Sources */ = {
