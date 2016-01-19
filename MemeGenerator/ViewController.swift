@@ -32,8 +32,8 @@ class ViewController: UIViewController {
           && (bottomText.characters.count >= 4))
       }
     cancelButton.rex_enabled <~ executing
-    networkActivityIndicatorView.rac_hidden <~ notExecuting
-    memeImageView.rac_hidden <~ executing
+    networkActivityIndicatorView.rex_hidden <~ notExecuting
+    memeImageView.rex_hidden <~ executing
   }
   
   @IBAction func generateTapped(sender: UIButton) {

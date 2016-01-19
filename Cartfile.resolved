@@ -1,3 +1,3 @@
-github "antitypical/Result" "76f9a972ed61ff872b731460bc610c8acbfae58c"
-github "ReactiveCocoa/ReactiveCocoa" "v4.0-alpha.1"
-github "neilpa/Rex" "v0.8.0"
+github "antitypical/Result" "1.0.1"
+github "ReactiveCocoa/ReactiveCocoa" "v4.0.0-RC.1"
+github "neilpa/Rex" "0.9.0-RC.1"
