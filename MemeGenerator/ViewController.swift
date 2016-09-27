@@ -17,8 +17,8 @@ class ViewController: UIViewController {
     
     updateUI()
     
-    self.topTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
-    self.bottomTextField.addTarget(self, action: "textFieldDidChange:", forControlEvents: .EditingChanged)
+    self.topTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), forControlEvents: .EditingChanged)
+    self.bottomTextField.addTarget(self, action: #selector(ViewController.textFieldDidChange(_:)), forControlEvents: .EditingChanged)
   }
   
   @IBAction func generateTapped(sender: UIButton) {

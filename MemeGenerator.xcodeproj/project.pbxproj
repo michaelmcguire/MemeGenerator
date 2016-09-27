@@ -7,7 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF52CBED1BBDED2A00A3F59B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52CBEC1BBDED2A00A3F59B /* Server.swift */; settings = {ASSET_TAGS = (); }; };
+		BF52CBED1BBDED2A00A3F59B /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF52CBEC1BBDED2A00A3F59B /* Server.swift */; };
 		BF60477A1BBDAA34008C8E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6047791BBDAA34008C8E9C /* AppDelegate.swift */; };
 		BF60477C1BBDAA34008C8E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60477B1BBDAA34008C8E9C /* ViewController.swift */; };
 		BF60477F1BBDAA34008C8E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF60477D1BBDAA34008C8E9C /* Main.storyboard */; };
@@ -249,14 +249,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = MemeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -264,14 +261,11 @@
 			isa = XCBuildConfiguration;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/Carthage/Build/iOS",
-				);
 				INFOPLIST_FILE = MemeGenerator/Info.plist;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};
