@@ -38,9 +38,14 @@ class ViewController: UIViewController {
   
   @IBAction func generateTapped(sender: UIButton) {
     lastRequest = self.request.apply((topTextField.text!, bottom: bottomTextField.text!))
-      .startWithNext { image in
-        self.memeImageView.image = image
-      }
+      .startWithResult{ (result) in
+        switch result {
+        case .Success(let image):
+          self.memeImageView.image = image
+        case .Failure(let error):
+          print(error)
+        }
+      } 
   }
   
   @IBAction func cancelTapped(sender: UIButton) {

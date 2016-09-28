@@ -7,16 +7,13 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		BF562E471BC4CB9A004236F9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF562E461BC4CB9A004236F9 /* Server.swift */; settings = {ASSET_TAGS = (); }; };
+		BF562E471BC4CB9A004236F9 /* Server.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF562E461BC4CB9A004236F9 /* Server.swift */; };
 		BF60477A1BBDAA34008C8E9C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6047791BBDAA34008C8E9C /* AppDelegate.swift */; };
 		BF60477C1BBDAA34008C8E9C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF60477B1BBDAA34008C8E9C /* ViewController.swift */; };
 		BF60477F1BBDAA34008C8E9C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF60477D1BBDAA34008C8E9C /* Main.storyboard */; };
 		BF6047811BBDAA34008C8E9C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = BF6047801BBDAA34008C8E9C /* Assets.xcassets */; };
 		BF6047841BBDAA34008C8E9C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = BF6047821BBDAA34008C8E9C /* LaunchScreen.storyboard */; };
-		BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */; };
-		BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF60478C1BBDB4D9008C8E9C /* Result.framework */; };
-		BF6C4EAD1BC5C01300A33FB0 /* Rex.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */; };
-		BF6CAFDA1BC5D4F70079F7FA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */; settings = {ASSET_TAGS = (); }; };
+		BF6CAFDA1BC5D4F70079F7FA /* UIViewExtensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,9 +25,6 @@
 		BF6047801BBDAA34008C8E9C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		BF6047831BBDAA34008C8E9C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		BF6047851BBDAA34008C8E9C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = ReactiveCocoa.framework; path = Carthage/Build/iOS/ReactiveCocoa.framework; sourceTree = "<group>"; };
-		BF60478C1BBDB4D9008C8E9C /* Result.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Result.framework; path = Carthage/Build/iOS/Result.framework; sourceTree = "<group>"; };
-		BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Rex.framework; path = Carthage/Build/iOS/Rex.framework; sourceTree = "<group>"; };
 		BF6CAFD91BC5D4F70079F7FA /* UIViewExtensions.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = UIViewExtensions.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -39,9 +33,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				BF6C4EAD1BC5C01300A33FB0 /* Rex.framework in Frameworks */,
-				BF60478D1BBDB4D9008C8E9C /* ReactiveCocoa.framework in Frameworks */,
-				BF60478E1BBDB4D9008C8E9C /* Result.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -51,9 +42,6 @@
 		BF60476D1BBDAA34008C8E9C = {
 			isa = PBXGroup;
 			children = (
-				BF6C4EAC1BC5C01300A33FB0 /* Rex.framework */,
-				BF60478B1BBDB4D9008C8E9C /* ReactiveCocoa.framework */,
-				BF60478C1BBDB4D9008C8E9C /* Result.framework */,
 				BF6047781BBDAA34008C8E9C /* MemeGenerator */,
 				BF6047771BBDAA34008C8E9C /* Products */,
 			);
@@ -113,6 +101,7 @@
 				TargetAttributes = {
 					BF6047751BBDAA34008C8E9C = {
 						CreatedOnToolsVersion = 7.0.1;
+						LastSwiftMigration = 0800;
 					};
 				};
 			};
@@ -293,6 +282,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Debug;
 		};
@@ -308,6 +298,7 @@
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
 				PRODUCT_BUNDLE_IDENTIFIER = com.example.MemeGenerator;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				SWIFT_VERSION = 2.3;
 			};
 			name = Release;
 		};

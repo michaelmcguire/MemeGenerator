@@ -1,5 +1,6 @@
 import UIKit
 import ReactiveCocoa
+import Result
 import Rex
 
 private var hidden: UInt8 = 0

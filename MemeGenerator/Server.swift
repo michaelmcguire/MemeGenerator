@@ -3,11 +3,6 @@ import UIKit
 import ReactiveCocoa
 import Result
 
-struct MemeParameters {
-  let top: String
-  let bottom: String
-}
-
 class Server {
   
   func generateMeme(top: String, bottom: String) -> SignalProducer<UIImage, NSError> {
